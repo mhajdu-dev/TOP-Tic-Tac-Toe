@@ -1,6 +1,14 @@
 let gameArray = ['','','','','','','','',''];
 let player = 'O';
 
+function changeArray(number) {
+  if(gameArray[number] === '') {
+    gameArray[number] = player;
+  } else {
+    return 
+  }
+};
+
 function changePlayer () {
   if(player === 'X') {
     player = 'O'
@@ -9,6 +17,10 @@ function changePlayer () {
   }
 };
 
-document.addEventListener('click', (e) => {
-  console.log(e.target.dataset.number);
+const playTable = document.querySelector('.grid');
+
+playTable.addEventListener('click', (e) => {
+  changeArray(e.target.dataset.number)
+  changePlayer();
+  console.log(gameArray);
 })
