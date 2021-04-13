@@ -23,10 +23,11 @@ function renderGrid() {
   for(let i = 0; i < gameArray.length; i++) {
     array[i].innerHTML = gameArray[i];
   }
-  // console.log(array)
-  // array.forEach((e) => {
-  //   e.innerHTML = player;
-  // })
+}
+
+function isOver() {
+  //implement the logic what compares the values in the array, and if there is three equal in vertically,
+  //horizontally or diagonal, ends the game
 }
 
 
