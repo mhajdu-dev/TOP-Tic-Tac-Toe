@@ -28,6 +28,20 @@ function renderGrid() {
 function isOver() {
   //implement the logic what compares the values in the array, and if there is three equal in vertically,
   //horizontally or diagonal, ends the game
+  if(gameArray[0] == gameArray[1] && gameArray[0] == gameArray[2]) {
+    console.log(`${player} won the game!`);
+    gameArray = ['','','','','','','','',''];
+    renderGrid();
+  } else if(gameArray[3] == gameArray[4] && gameArray[3] == gameArray[5]) {
+    console.log(`${player} won the game!`);
+    gameArray = ['','','','','','','','',''];
+    renderGrid();
+  } else if(gameArray[6] == gameArray[7] && gameArray[6] == gameArray[8]) {
+    console.log(`${player} won the game!`);
+    gameArray = ['','','','','','','','',''];
+    renderGrid();
+  }
+
 }
 
 
@@ -35,5 +49,6 @@ playTable.addEventListener('click', (e) => {
   changeArray(e.target.dataset.number)
   changePlayer();
   renderGrid();
-  console.log(gameArray);
+  isOver();
+  console.log(e.target.dataset.number);
 })
